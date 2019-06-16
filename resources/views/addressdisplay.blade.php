@@ -5,9 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link defer rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
     </head>
     <body>
         <div class="columns is-centered">
@@ -16,6 +14,7 @@
                 @if (count($addresses))
                     @foreach($addresses as $address)
                     <div class="card">
+                        <a href="{{ url('/delete/' . $loop->index) }}">Delete</a>
                         <div class="card-content">
                             <div class="media">
                                 <div class="media-content">
